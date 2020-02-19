@@ -11,6 +11,5 @@ public class MainCalculator {
         instructor.enterInvestmentPeriod(user);
         instructor.enterInterestRate(user);
         instructor.calculateTheResult(user);
-
     }
 }
