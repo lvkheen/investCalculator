@@ -15,12 +15,12 @@ public class Instructor {
         System.out.println("Введите сумму первоначального взноса:");
         int startDepo = (int) (FloatingDecimal.parseFloat(reader.readLine()));
 
-        if(startDepo < 0){
+        if(startDepo < 0) {
             int newStartDepo = startDepo * (-1);
-            System.out.printf("Вы ввели отрицательное значение. Оно автоматически будет заменено "  +
+            System.out.printf("Вы ввели отрицательное значение. Оно автоматически будет заменено " +
                     "на положительное: %d\n", newStartDepo);
-            user.setStartDepo(newStartDepo);
-        } else user.setStartDepo(startDepo);
+                       user.setStartDepo(newStartDepo);
+                   } else user.setStartDepo(startDepo);
 
         user.depo.add(user.getStartDepo());                                     // добавляем в список с депо
         return user.getStartDepo();                                             // начальную сумму
@@ -57,7 +57,6 @@ public class Instructor {
     public double enterInterestRate(User user) throws IOException {
         System.out.println("Введите номинальную процентную ставку:");
         double interestRate = FloatingDecimal.parseFloat(reader.readLine()) / 100;     // Процентная ставка в формате 0,05
-        System.out.println(interestRate);
         user.setInterestRate(interestRate);
 
         return user.getInterestRate();
